@@ -12,6 +12,7 @@ pipeline {
     stage('DB') {
       agent {
         docker { image 'mysql:latest' }
+      }
       steps {
         sh 'CREATE database db1;'
         sh 'use db1;'
